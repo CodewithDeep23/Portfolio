@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+* {
+    font-family: Montserrat;
+}
+
+@theme {
+  --lightHover: #fcf4ff;
+  --darkHover: #2a004a;
+  --darkTheme: #11001F;
+  --color-bgone: #c2c7ca7d;
+  --color-bgtwo: black;
+  --color-gray-light: #C4C4C4;
+  --breakpoint-ml: 60rem;
+}
+
+.clip-left {
+  clip-path: polygon(0 0, 90% 0, 50% 100%, 0% 100%);
+}
+
+.clip-right {
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 45% 100%);
+}
+
+/* Hide scrollbars but still allow scrolling */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  overflow-y: auto; /* allow vertical scroll */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+
+body {
+  padding-top: 74px;
+}
+
+/* HTML: <div class="slanted-edge"></div> */
+.slanted-edge {
+  --p: 70px; /* control the shape (can be percentage) */
+  clip-path: polygon(0 var(--p),100% 0,100% 100%,0 100%);
+}
+
+/* For slanted-edge */
+@media (max-height: 700px) and (max-width: 400px) {
+  .mt-custom {
+    margin-top: 1rem; /* same as mt-4.5 */
+  }
+}
+
+@media (min-width: 400px) {
+  .mt-slanted-edge {
+    margin-top: 2rem;
+  }
+}
+
+/* Skill card */
+/* @media (min-width: 360px) and (max-width: 450px) {
+  grid-template-columns: repeat(1fr, 1fr, 1fr);
+} */
+
+/* Wave in skill card */
+.wave {
+  position: absolute;
+  z-index: -10;
+  width: 540px;
+  height: 700px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -50%;
+  margin-top: -70%;
+  background: linear-gradient(
+    744deg,
+    rgba(141, 190, 245, 0.3),   /* soft blue with alpha */
+    rgba(94, 124, 168, 0.4) 30%, 
+    rgba(200, 231, 249, 0.2)   /* light bluish white with alpha */
+  );
+  border-radius: 40%;
+  /* Glass effect */
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+
+  /* Smooth look */
+  opacity: 0.8;
+  animation: wave 55s infinite linear;
+}
+
+.wave:nth-child(2),
+.wave:nth-child(3) {
+  top: 210px;
+}
+
+.playing .wave {
+  border-radius: 40%;
+  animation: wave 30000ms infinite linear;
+}
+
+.playing .wave:nth-child(2) {
+  animation-duration: 40000ms;
+}
+
+.wave:nth-child(2) {
+  animation-duration: 500s;
+}
+
+.playing .wave:nth-child(3) {
+  animation-duration: 500ms;
+}
+
+.wave:nth-child(3) {
+  animation-duration: 45s;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Card Bounce */
+.card:active {
+  transform: translateY(0em)
+}
+
+/* Bounce effect */
+/* @keyframes bounce {
+  0%   { transform: scale(1) translateY(0); }
+  30%  { transform: scale(0.95) translateY(-20px); }
+  50%  { transform: scale(1.05) translateY(0); }
+  70%  { transform: scale(0.97) translateY(-10px); }
+  100% { transform: scale(1) translateY(0); }
+} */
+
+.view-project {
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 44px;
+  padding-bottom: 5px;
+  background-image: url("https://uploads-ssl.webflow.com/61f03747d8d407ed117df27f/61f251e2f92f51c6311b9bed_Gradient%20Arrow.svg");
+  background-position: 100% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.gradient-button {
+  margin-top: 0;
+  padding: 16px 84px 16px 40px;
+  border-radius: 35px;
+  background-color: black;
+  background-image: url("https://uploads-ssl.webflow.com/61f03747d8d407ed117df27f/61f117556f38a1a45d4fc6e4_Button%20Arrow.svg");
+  background-position: 98% 50%, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: no-repeat, no-repeat;
+  color: #fff;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(0deg, #A47CF3, #683FEA);
+  /* background-image: url("https://uploads-ssl.webflow.com/61f03747d8d407ed117df27f/61f117556f38a1a45d4fc6e4_Button%20Arrow.svg"); */
+  /* background-position: 98% 50%, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: no-repeat, no-repeat; */
+  box-shadow: 
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+    0px 0px 180px 0px #9917FF;
+  transform: translateY(-2px);
+}
+
+.gradient-button:hover .text {
+  color: white;
+}
+
+.gradient-button:hover .sparkle {
+  color: white; /* since we’re using currentColor in SVG */
+  transform: scale(0.5);
+}
+
+.gradient-border {
+  background: linear-gradient(#2e2e2e, #2e2e2e) padding-box,
+              linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  border: 3px solid transparent;
+  background-size: 300% 300%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+hr {
+  background-size: 200% 100%;
+}
