@@ -23,11 +23,6 @@ const Skills = () => {
 
       {/* Background Layers */}
       <div className="absolute inset-0 flex pt-10 items-center flex-col justify-center z-1 bg-gradient-to-b from-pink-400 to-blue-600 opacity-10">
-        {/* <h1
-          className={`text-[10rem] md:text-[16rem] font-bold bg-gradient-to-b from-blue-700 to-pink-500 bg-clip-text text-transparent z-20 opacity-90 select-none ${rob.className} blur-[2px]`}
-        >
-          Skills
-        </h1> */}
       </div>
 
       {/* Foreground content */}

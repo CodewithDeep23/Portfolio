@@ -8,7 +8,6 @@ import { easeIn, motion, spring } from "motion/react";
 import { TapButton } from "../atoms/Button";
 
 const Navbar = () => {
-  // const [scroll, setScroll] = useState(false);
   const [isOpen, setOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -30,28 +29,10 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 50) {
-  //       setScroll(true);
-  //     } else {
-  //       setScroll(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   return (
     <>
       <nav
-        className={`text-white w-full flex justify-between border-[#FFFFFF] fixed top-0 items-center lg:px-8 xl:px-[4%] py-3 z-50 ${
-          scroll ? "bg-black" : "bg-black"
-        }`}
+        className={`text-white w-full flex justify-between border-[#FFFFFF] fixed top-0 items-center lg:px-8 xl:px-[4%] py-3 z-50 bg-black`}
       >
         <div className=" w-[50px] p-1 h-[50px] rounded-4xl border-2 border-white hover:shadow-[0_0_15px_4px_rgba(255,255,255,0.8)] transition duration-300 hover:p-0 max-lg:ml-3 
     hover:translate-x-[-0.05em] hover:translate-y-[-0.05em]
