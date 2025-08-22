@@ -4,7 +4,9 @@ import { Roboto } from "next/font/google";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 
-const rob = Roboto({});
+const rob = Roboto({
+  subsets: ["latin"]
+});
 
 const Skills = () => {
   return (

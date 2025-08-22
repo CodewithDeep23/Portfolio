@@ -5,7 +5,9 @@ import Image from "next/image";
 import React, {useState} from "react";
 import { FancyButton } from ".";
 
-const rob = Roboto({})
+const rob = Roboto({
+  subsets: ["latin"]
+})
 
 const AboutCard = () => {
     const [showMore, setShowMore] = useState(false);
