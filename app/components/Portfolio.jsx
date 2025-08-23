@@ -3,6 +3,7 @@ import Image from "next/image";
 import { projects } from "@/assets/assets";
 import { easeOut, motion } from "motion/react";
 import { FancyButton } from "../atoms";
+import { TapButton } from "../atoms/Button";
 
 export function Portfolio() {
 
@@ -125,15 +126,20 @@ export function Portfolio() {
 
           {/* View all projects button */}
           <a
-            href="/projects"
-            className="mt-6 px-6 py-3 rounded-xl font-semibold text-white"
+            href="https://github.com/CodewithDeep23"
+            target="_blank"
+            className="mt-6 px-4 py-2 rounded-xl font-bold text-white"
           >
             {/* View All Projects */}
-            <FancyButton 
-            text="More"
-            className="w-[12em] h-[3.5em] bg-[#a370f0]"
-            svgColor="bg-blue-600"
-            />
+            <button 
+            className="w-[12em] h-[3.5em] rounded-4xl 
+    text-white font-bold text-xl
+    bg-gradient-to-r from-pink-600 to-gray-700 
+    hover:translate-x-[-0.05em] hover:translate-y-[-0.05em] hover:shadow-[0.15em_0.15em_#5566c2] p-0
+    active:translate-x-[0.05em] active:translate-y-[0.05em] active:shadow-[0.05em_0.05em_#5566c2] cursor-pointer"
+            >
+              More
+            </button>
           </a>
         </div>
       </div>
