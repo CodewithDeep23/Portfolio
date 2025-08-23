@@ -86,7 +86,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className="bottom-2 absolute z-20 text-sm text-gray-400">
-        © 2025 Your Name. All rights reserved.
+        © 2025 Deepankar Singh. All rights reserved.
       </div>
     </section>
   );
