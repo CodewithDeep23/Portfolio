@@ -79,6 +79,7 @@ export default function RootLayout({ children }) {
     >
       <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${openSans.variable}`}>
         <ClientWrapper>{children}</ClientWrapper>
+        {/* {children} */}
       </body>
     </html>
   );

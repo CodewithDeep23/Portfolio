@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { easeIn, motion, spring } from "motion/react";
-import { TapButton } from "../atoms/Button";
+import { TapButton } from "../../atoms/Button";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -39,7 +39,7 @@ const Navbar = () => {
     active:translate-x-[0.05em] active:translate-y-[0.05em] active:shadow-[0.05em_0.05em_#5566c2]">
           <a href="#top">
             <Image
-              src={assets.logo}
+              src={assets.logo1}
               alt="Portfolio logo"
               className="rounded-4xl"
             />

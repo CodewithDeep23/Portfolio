@@ -5,7 +5,7 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { TapButton } from "../atoms/Button";
+import { TapButton } from "../../atoms/Button";
 
 const Footer = () => {
   return (

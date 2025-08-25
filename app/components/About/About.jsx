@@ -1,6 +1,6 @@
 import React from 'react'
 import {Dancing_Script } from 'next/font/google'
-import { AboutCard } from '../atoms'
+import { AboutCard } from '../../atoms'
 import {easeIn, motion} from 'motion/react'
 
 const edu = Dancing_Script({

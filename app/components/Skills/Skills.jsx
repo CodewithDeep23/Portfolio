@@ -1,5 +1,5 @@
 import React from "react";
-import { CardSection } from "../atoms";
+import { CardSection } from "../../atoms";
 import { Roboto } from "next/font/google";
 import Image from "next/image";
 import { assets } from "@/assets/assets";

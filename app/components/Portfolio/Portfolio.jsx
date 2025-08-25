@@ -2,8 +2,8 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { projects } from "@/assets/assets";
 import { easeOut, motion } from "motion/react";
-import { FancyButton } from "../atoms";
-import { TapButton } from "../atoms/Button";
+import { FancyButton } from "../../atoms";
+import { TapButton } from "../../atoms/Button";
 
 export function Portfolio() {
 

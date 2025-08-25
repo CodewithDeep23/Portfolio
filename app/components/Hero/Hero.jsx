@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { Raleway } from "next/font/google";
-import { Attherate, Github, Linkdin } from "../atoms";
+import { Attherate, Github, Linkdin } from "../../atoms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAt,

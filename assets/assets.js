@@ -39,6 +39,7 @@ import bg2 from './bg2.png'
 import bg3 from './bg3.png'
 import bg4 from './bg4.jpg'
 import github2 from './github2.png'
+import logo1 from './logo1.png'
 
 import { Github } from '@/app/atoms'
 
@@ -85,7 +86,8 @@ export const assets = {
   bg3,
   bg4,
   github2,
-  express2
+  express2,
+  logo1
 }
 
 import Image from 'next/image'
@@ -94,122 +96,122 @@ import Image from 'next/image'
 export const cards = [
   {
     id: 1,
-    icon: <Image src={assets.cpp} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.cpp} alt="" className="w-[70px] h-[70px]" />,
     title: "C++",
   },
   {
     id: 2,
-    icon: <Image src={assets.python} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.python} alt="" className="w-[70px] h-[70px]" />,
     title: "Python",
   },
   {
     id: 3,
-    icon: <Image src={assets.sql} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.sql} alt="" className="w-[70px] h-[70px]" />,
     title: "SQL",
   },
   {
     id: 4,
-    icon: <Image src={assets.html} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.html} alt="" className="w-[70px] h-[70px]" />,
     title: "HTML",
   },
   {
     id: 5,
-    icon: <Image src={assets.css} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.css} alt="" className="w-[70px] h-[70px]" />,
     title: "CSS",
   },
   {
     id: 6,
-    icon: <Image src={assets.js} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.js} alt="" className="w-[70px] h-[70px]" />,
     title: "JavaScript",
   },
   {
     id: 7,
-    icon: <Image src={assets.react} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.react} alt="" className="w-[70px] h-[70px]" />,
     title: "React Js",
   },
   {
     id: 8,
-    icon: <Image src={assets.node} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.node} alt="" className="w-[70px] h-[70px]" />,
     title: "Node Js",
   },
   {
     id: 9,
-    icon: <Image src={assets.express2} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.express2} alt="" className="w-[70px] h-[70px]" />,
     title: "Express Js",
   },
   {
     id: 10,
-    icon: <Image src={assets.mongodb} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.mongodb} alt="" className="w-[70px] h-[70px]" />,
     title: "MongoDB",
   },
   {
     id: 11,
-    icon: <Image src={assets.mysql} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.mysql} alt="" className="w-[70px] h-[70px]" />,
     title: "MySQL",
   },
   {
     id: 12,
-    icon: <Image src={assets.tailwind} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.tailwind} alt="" className="w-[70px] h-[70px]" />,
     title: "Tailwind",
   },
   {
     id: 13,
-    icon: <Image src={assets.github2} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.github2} alt="" className="w-[70px] h-[70px]" />,
     title: "Github",
   },
   {
     id: 14,
-    icon: <Image src={assets.docker} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.docker} alt="" className="w-[70px] h-[70px]" />,
     title: "Docker",
   },
   {
     id: 15,
-    icon: <Image src={assets.vscode} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.vscode} alt="" className="w-[70px] h-[70px]" />,
     title: "VsCode",
   },
   {
     id: 16,
-    icon: <Image src={assets.jupyter} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.jupyter} alt="" className="w-[70px] h-[70px]" />,
     title: "Jupyter",
   },
   {
     id: 17,
-    icon: <Image src={assets.copilot} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.copilot} alt="" className="w-[70px] h-[70px]" />,
     title: "Copilot",
   },
   {
     id: 18,
-    icon: <Image src={assets.gemini} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.gemini} alt="" className="w-[70px] h-[70px]" />,
     title: "Gemini",
   },
   {
     id: 19,
-    icon: <Image src={assets.gpt} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.gpt} alt="" className="w-[70px] h-[70px]" />,
     title: "ChatGPT",
   },
   {
     id: 20,
-    icon: <Image src={assets.postman} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.postman} alt="" className="w-[70px] h-[70px]" />,
     title: "Postman",
   },
   {
     id: 21,
-    icon: <Image src={assets.dataEngi} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.dataEngi} alt="" className="w-[70px] h-[70px]" />,
     title: "Data Eng",
   },
   {
     id: 22,
-    icon: <Image src={assets.databricks} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.databricks} alt="" className="w-[70px] h-[70px]" />,
     title: "Databrick",
   },
   {
     id: 23,
-    icon: <Image src={assets.etl} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.etl} alt="" className="w-[70px] h-[70px]" />,
     title: "ETL",
   },
   {
     id: 24,
-    icon: <Image src={assets.dataAna} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.dataAna} alt="" className="w-[70px] h-[70px]" />,
     title: "Data Ana",
   },
 ];
