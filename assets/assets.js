@@ -14,6 +14,7 @@ import sql from './sql.png'
 import react from './react.png'
 import node from './node.png'
 import express from './express.png'
+import express2 from './express2.png'
 import mongodb from './mongodb.png'
 import tailwind from './tailwind.png'
 import docker from './docker.png'
@@ -33,9 +34,14 @@ import project1 from './project1.png'
 import project2 from './project2.png'
 import project3 from './project3.png'
 import project4 from './project4.png'
+import bg1 from './bg1.png'
+import bg2 from './bg2.png'
+import bg3 from './bg3.png'
+import bg4 from './bg4.jpg'
+import github2 from './github2.png'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHtml5 } from '@fortawesome/free-brands-svg-icons'
+import { Github } from '@/app/atoms'
+
 
 
 export const assets = {
@@ -73,7 +79,13 @@ export const assets = {
   project1,
   project2,
   project3,
-  project4
+  project4,
+  bg1,
+  bg2,
+  bg3,
+  bg4,
+  github2,
+  express2
 }
 
 import Image from 'next/image'
@@ -122,7 +134,7 @@ export const cards = [
   },
   {
     id: 9,
-    icon: <Image src={assets.express} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.express2} className="w-[70px] h-[70px]" />,
     title: "Express Js",
   },
   {
@@ -142,7 +154,7 @@ export const cards = [
   },
   {
     id: 13,
-    icon: <Image src={assets.github} className="w-[70px] h-[70px]" />,
+    icon: <Image src={assets.github2} className="w-[70px] h-[70px]" />,
     title: "Github",
   },
   {

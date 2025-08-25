@@ -1,9 +1,14 @@
 "use client";
 import { assets } from "@/assets/assets";
-import { Roboto } from "next/font/google";
+import { Roboto, Dancing_Script } from "next/font/google";
 import Image from "next/image";
 import React, {useState} from "react";
 import { FancyButton } from ".";
+
+const edu = Dancing_Script({
+    subsets: ["latin"],
+    weight: "700"
+})
 
 const rob = Roboto({
   subsets: ["latin"]
@@ -31,9 +36,9 @@ const AboutCard = () => {
 
         {/* Extra content */}
         {showMore && (
-            <div className="mb-8 text-slate-600 leading-normal font-light">
+            <div className={`mb-8 text-slate-600 leading-normal font-light ${rob.className}`}>
                 My experience includes building full-stack web applications using React and Node.js as well as developing data pipelines and analytics solutions with SQL and PySpark. I’m passionate about creating software that is both impactful and user-friendly, and I constantly strive to improve my craft.
-                <p className="mt-8">
+                <p className={`mt-8 ${rob.className}`}>
             Outside of work, I love playing sports, drawing, and exploring the stock market, which keep me curious, creative, and motivated.
                 </p>
             </div>

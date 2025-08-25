@@ -4,6 +4,15 @@ import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { Raleway } from "next/font/google";
 import { Attherate, Github, Linkdin } from "../atoms";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAt,
+  faEnvelope,
+  faMailForward,
+  faMessage,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -14,27 +23,38 @@ const Hero = () => {
     <>
       <main
         id="top"
-        className="relative w-full h-[calc(100vh-74px)] mx-auto scroll-mt-[74px]"
+        className="relative w-full h-[calc(100vh-74px)] mx-auto scroll-mt-[74px] overflow-hidden"
       >
         {/* Left gray section */}
-        <div className="absolute inset-0 bg-bgone clip-left"></div>
+        {/* <div className="absolute inset-0 bg-bgone clip-left"></div> */}
 
         {/* Right black section */}
-        <div className="absolute inset-0 bg-bgtwo clip-right"></div>
+        {/* <div className="absolute inset-0 bg-bgtwo clip-right"></div> */}
+        <div className="absolute inset-0 h-full w-full top-0">
+          <Image
+            src={assets.bg4}
+            alt="Portfolio Background"
+            fill
+            className="object-cover scale-105"
+            priority
+          />
+        </div>
 
         {/* Content */}
         <div className="relative z-30 grid grid-cols-1 md:grid-cols-2 h-full">
-          <div className="hidden md:flex items-start justify-center flex-col pl-30">
+          <div className="cardContainer  hidden md:flex items-start justify-center flex-col lg:pl-24 pl-20">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: easeInOut }}
-              className={`${raleway.className} flex flex-col gap-4`}
+              className={`${raleway.className} card flex p-5 flex-col gap-4 text-white rounded-lg 
+               bg-[rgba(65,65,65,0.308)] border border-[rgba(255,255,255,0.089)] 
+               backdrop-blur-[30px]`}
             >
-              <h1 className="text-[40px] font-bold">Hi, I am</h1>
-              <div className="flex flex-col gap-0 -space-y-3">
-                <h1 className="text-[50px] font-bold ">Deepankar Singh</h1>
-                <p className="text-[20px] font-extrabold bg-gradient-to-r from-[#7079f0] to-[#9f70f0] bg-clip-text text-transparent">
+              <h1 className="text-5xl font-extrabold lg:leading-15 scale-y-120">Hi, I am</h1>
+              <div className="flex flex-col gap-0 space-y-2">
+                <h1 className="text-5xl font-bold lg:leading-15 scale-y-120">Deepankar Singh</h1>
+                <p className="text-[25px] font-extrabold bg-gradient-to-r from-[#7079f0] to-[#9f70f0] bg-clip-text text-transparent">
                   Software Developer / Backend Engineer
                 </p>
               </div>
@@ -45,9 +65,15 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 60 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: easeInOut }}
-                  className="bg-gray-light p-[10px] shadow-[0_2px_4px_0_rgba(14,30,37,0.12),0_2px_16px_0_rgba(14,30,37,0.32)] hover:shadow-[0_4px_8px_-2px_rgba(9,30,66,0.25),0_0px_0px_1px_rgba(9,30,66,0.08)]"
+                  className="p-[5px] hover:shadow-[0_0_10px_#ffffff,0_0_20px_#60a5fa,0_0_40px_#3b82f6] transition-shadow duration-300 bg-black/70 backdrop-blur-lg 
+    border border-white/70 rounded-[5px]"
                 >
-                  <Image src={assets.attherate} alt="" className="w-[30px]" />
+                  <FontAwesomeIcon
+                                  className="hover:scale-110 transition-all duration-400"
+                                  icon={faEnvelope}
+                                  style={{ color: "#ffffff" }}
+                                  size="2xl"
+                                />
                 </motion.div>
               </a>
               <a
@@ -59,9 +85,15 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 60 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, ease: easeInOut }}
-                  className="bg-gray-light p-[10px] shadow-[0_2px_4px_0_rgba(14,30,37,0.12),0_2px_16px_0_rgba(14,30,37,0.32)] hover:shadow-[0_4px_8px_-2px_rgba(9,30,66,0.25),0_0px_0px_1px_rgba(9,30,66,0.08)]"
+                  className="p-[5px] hover:shadow-[0_0_10px_#ffffff,0_0_20px_#60a5fa,0_0_40px_#3b82f6] transition-shadow duration-300 bg-black/70 backdrop-blur-lg 
+    border border-white/70 rounded-[5px]"
                 >
-                  <Image src={assets.github} alt="" className="w-[30px]" />
+                  <FontAwesomeIcon
+                                className="hover:scale-110 transition-all duration-400"
+                                icon={faGithub}
+                                style={{ color: "#ffffff" }}
+                                size="2xl"
+                              />
                 </motion.div>
               </a>
               <a
@@ -73,13 +105,20 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 60 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, ease: easeInOut }}
-                  className="bg-gray-light p-[10px] shadow-[0_2px_4px_0_rgba(14,30,37,0.12),0_2px_16px_0_rgba(14,30,37,0.32)] hover:shadow-[0_4px_8px_-2px_rgba(9,30,66,0.25),0_0px_0px_1px_rgba(9,30,66,0.08)]"
+                  className="p-[5px] hover:shadow-[0_0_10px_#ffffff,0_0_20px_#60a5fa,0_0_40px_#3b82f6] transition-shadow duration-300 bg-black/70 backdrop-blur-lg 
+    border border-white/70 rounded-[5px]"
                 >
-                  <Image src={assets.linkidin} alt="" className="w-[30px]" />
+                  <FontAwesomeIcon
+                                  className="hover:scale-110 transition-all duration-400"
+                                  icon={faLinkedin}
+                                  style={{ color: "#ffffff" }}
+                                  size="2xl"
+                                />
                 </motion.div>
               </a>
             </div>
           </div>
+
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -92,7 +131,7 @@ const Hero = () => {
               className="mt-[70px] min-h-screen max-w-4xl max-lg:mt-[20%] 
              rounded-2xl drop-shadow-[0_0_15px_rgba(0,255,255,0.9)]"
             />
-            <div className="md:hidden absolute w-full z-20 bottom-0 top-[50%] slanted-edge bg-white/20 mt-slanted-edge backdrop-blur-lg shadow-2xl"></div>
+            <div className="md:hidden absolute w-full z-20 bottom-0 top-[50%] slanted-edge mt-slanted-edge shadow-2xl bg-[rgba(65,65,65,0.308)] backdrop-blur-[30px]"></div>
             <div className="md:hidden absolute w-full z-20 top-[50%] bottom-0 grid grid-cols-[2fr_auto]">
               
               <div
@@ -105,7 +144,7 @@ const Hero = () => {
                   transition={{ duration: 1, ease: easeInOut }}
                   className="absolute bottom-[20%] max-sm:bottom-[15%]"
                 >
-                  <h1 className="text-[26px] sm:text-[28px] font-extrabold text-black">
+                  <h1 className="text-[26px] sm:text-[28px] font-extrabold text-white">
                     Hi, I am
                   </h1>
                   <div className="flex flex-col gap-0 -space-y-1">

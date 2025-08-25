@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex max-lg:flex-col max-w-[1280px] max-lg:items-center bg-black px-[60px] pt-15 pb-24 md:pt-25 md:pb-32 items-start max-md:px-4 scroll-mt-[74px]"
+      className="flex mx-auto max-lg:flex-col max-w-[1280px] max-lg:items-center bg-black px-[60px] pt-15 pb-24 md:pt-25 md:pb-32 items-start max-md:px-4 scroll-mt-[74px]"
     >
       <div className="mb-10 max-lg:max-w-2xl w-full">
         <h2 className="text-white text-left text-5xl md:text-5xl font-bold flex flex-col scale-y-120 tracking-wide lg:leading-15">

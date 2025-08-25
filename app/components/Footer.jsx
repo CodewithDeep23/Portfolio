@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <section
       id="contact"
-      className="relative flex flex-col max-w-[1280px] items-center px-[60px] pt-15 pb-15 md:pt-15 md:pb-20 max-md:px-4 scroll-mt-[74px] bg-black"
+      className="relative flex flex-col max-w-[1280px] items-center px-[60px] pt-15 pb-15 md:pt-15 md:pb-20 max-md:px-4 scroll-mt-[74px] bg-black mx-auto"
     >
         <hr className="absolute top-0 left-0 w-full h-[2px] border-0 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 animate-[shimmer_10s_linear_infinite]" />
       <div className="max-lg:max-w-2xl w-full">
